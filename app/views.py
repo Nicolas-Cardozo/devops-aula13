@@ -93,11 +93,11 @@ def lista_localprova(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/local_prova.html',
+        'app/lista_localprova.html',
         context_instance = RequestContext(request,
         {
             'title':'Local e data dos vestibulares',
-            'localprova': Localprova.objects.all(),
+            'localprova': lista_localprova.objects.all(),
             'year':datetime.now().year,
         })
     )
