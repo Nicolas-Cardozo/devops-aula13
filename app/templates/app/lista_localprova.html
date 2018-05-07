@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Lista de locais das provas</h1>
+</div>
+
+<table class="table">
+    <tr><th>Local Prova</th><th>Email</th></tr>
+        {% for localprova in localprova %}
+          <tr><td>{{ localprova.instituicao }}</td><td>{{ localprova.local }}</td><td>{{ localprova.data }}</td></tr>
+        {% endfor %}
+</table>
+
+{% endblock %}
