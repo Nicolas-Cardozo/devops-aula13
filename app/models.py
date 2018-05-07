@@ -16,3 +16,8 @@ class Vestibular(models.Model):
 class Candidato(models.Model):
     nome = models.CharField(max_length=200)
     email = models.CharField(max_length=50)
+    
+class localprova(models.Model):
+    instituicao = models.CharField(max_length=200)
+    local = models.CharField(max_length=200)
+    data = models.CharField(max_length=50)
